@@ -17,7 +17,7 @@ simulation region of interest (Simulation.hx) it becomes instantiated as a
 dynamic Entity.hx which gets processed each frame until its body leaves the
 simulation region of interest.
 
-Base.hx can only contain ONE Entity.hx instance type which is coupled with a 
+Base.hx can only contain one Entity.hx instance type which is coupled with a 
 physical body. This is different to typical entity systems, such as in Unity3D, 
 that instead build the entity model on a Transform class. Our approach means 
 that all entities occupy a bounded region of physical space such that we can 
@@ -33,10 +33,9 @@ Roadmap
 2. Make the core 2D entities stable (Button, Sound)
 3. JSON universe format for Base.hx
 4. Mobile testing and Input
-5. (optional) Addons Entity library
-..* GUI
-7. (optional) Haxen Editor library
-8. Abstract 2D parts and port @cwkx 3D GPU voxel research
+5. (optional) Addons Entity library (GUI Widgets, Character Controller, ...)
+6. (optional) Haxen Editor library
+7. Abstract 2D parts and port @cwkx 3D GPU voxel research
 
 Canvas.hx
 =========
