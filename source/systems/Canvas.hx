@@ -24,7 +24,7 @@ class Canvas extends openfl.display.Sprite
 		super();
 		
 		Lib.current.stage.scaleMode = StageScaleMode.EXACT_FIT;
-		Lib.current.stage.frameRate = 60.0;
+		Lib.current.stage.frameRate = fps;
         
 		Physics.create(gravity);
 		

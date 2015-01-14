@@ -13,6 +13,7 @@ import nape.geom.Vec2;
 import nape.phys.Body;
 import nape.phys.BodyType;
 import nape.shape.Polygon;
+import openfl.Lib;
 import systems.Physics.Callbacks;
 
 /** Handle the logic of activating and updating entities within the simulation region. **/
@@ -30,6 +31,9 @@ class Simulation
 		
 		var innerBounds = Vec2.get(320 / 3, 240 / 3);
 		var outerBounds = Vec2.get(640 / 3, 480 / 3);
+			
+		// innerBounds = Vec2(Lib.current.stage.width, Lib.current.stage.height);
+		// outerBounds = innerBounds.mul(2.0);
 		
 		inner = new Body(BodyType.KINEMATIC);
 		outer = new Body(BodyType.KINEMATIC);
@@ -76,9 +80,8 @@ class Simulation
 		
 		if (base.entity == null)
 		{
-			var entity:Entity = Type.createInstance(Type.resolveClass("entities::"+base.type), []);
-				entity.body = new Body();
-				entity.body.position = base.body.position;
+			var entity:Entity = Type.createInstance(Type.resolveClass("entities."+base.type), []);
+				entity.body = new Body(BodyType.DYNAMIC);
 				entity.body.cbTypes.add(Callbacks.entity);
 				entity.body.space = Physics.space;
 				entity.body.userData.entity = entity;

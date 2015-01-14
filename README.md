@@ -35,7 +35,7 @@ Roadmap
 4. Mobile testing and Input
 5. (optional) Addons Entity library (GUI Widgets, Character Controller, ...)
 6. (optional) Haxen Editor library
-7. Abstract 2D parts and port @cwkx 3D GPU voxel research
+7. Abstract 2D parts and port 3D GPU voxel research
 
 Canvas.hx
 =========
@@ -74,7 +74,7 @@ This means that only contributing data gets created in memory and processed.
     |		+---------------+				|
     |		|	o			|				|
     |		|	|-/			|<-Inner Box	|
-    |		|	/\			|				|
+    |		|	/\			|  (Camera)		|
     |		+---------------+				|
     |										|
     |<-Simulation Box						|

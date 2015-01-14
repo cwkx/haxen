@@ -21,17 +21,11 @@ class Main extends Canvas
 		super(Vec2.weak(0, 9.81));
 		
 		// Test
-		base = new Base();
-		base.type = "Anim";
-		base.body.type = BodyType.DYNAMIC;
-		base.body.shapes.add(new Polygon(Polygon.rect(0, 0, 16, 16)));
-		base.body.position = new Vec2(Lib.current.stage.width/2, Lib.current.stage.height/2);
+		base = new Base("Anim", null );
+		
 		// base.json = "{columns:9,tileWidth:200,rows:9,smooth:false,tileHeight:300,spritesheet:\"assets/art/spritesheet.png\",animations:[],play:null}";
 		
-		logo = new Base();
-		logo.type = "Sprite";
-		logo.body.shapes.add(new Polygon(Polygon.rect(0, 0, 16, 16)));
-		logo.body.position = new Vec2(0, 0);
+		logo = new Base("Sprite", null );
 		
 		Actuate.tween (Canvas.main, 6, { scaleX: 2, scaleY: 2 } ).delay (0.4).ease (Elastic.easeOut);
 	}

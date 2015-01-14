@@ -2,26 +2,19 @@ package entities;
 
 import entities.Entity;
 import haxe.Json;
+import nape.geom.Vec2;
+import nape.shape.Polygon;
 import openfl.Assets;
 import openfl.display.Bitmap;
 import openfl.Lib;
 import systems.Canvas;
 import systems.Serialize;
 
-/** Serializable **/
-private class Data
-{
-	public var sprite:String = "assets/art/openfl.png";
-	public var smooth:Bool = true;
-	
-	public function new() {}
-}
-
 /** A sprite is a physical non-animated visual entity. **/
 class Sprite extends Entity
 {
 	public var sprite:openfl.display.Sprite;
-	public var data:Data;
+	public var data:SpriteData;
 	
 	/** Create the sprite instance **/
 	override public function init()
@@ -30,16 +23,20 @@ class Sprite extends Entity
 		
 		if (Serialize.fromJson(base.json, data) == false)
 		{
-			data = new Data();
+			data = new SpriteData();
 			trace("Error parsing json, using default:\n" + Serialize.toJson(data));
 		}
 		
-		sprite = new flash.display.Sprite();
+		sprite = new openfl.display.Sprite();
 		
 		var bitmap = new Bitmap (Assets.getBitmapData(data.sprite));
 			bitmap.smoothing = data.smooth;
 		
 		sprite.addChild(bitmap);
+		
+		body.shapes.add(new Polygon(Polygon.rect(data.x, data.y, data.w, data.h)));
+		body.allowMovement = data.moveable;
+		body.allowRotation = data.rotatable;
 		
 		Canvas.main.addChild(sprite);
 	}
@@ -62,4 +59,15 @@ class Sprite extends Entity
 		super.kill();
 		data = null;
 	}
+}
+
+/** Serializable sprite data **/
+class SpriteData extends EntityData
+{
+	public var sprite:String = "assets/art/openfl.png";
+	public var smooth:Bool = true;
+	public var rotatable:Bool = true;
+	public var moveable:Bool = true;
+	
+	public function new() { super(); }
 }

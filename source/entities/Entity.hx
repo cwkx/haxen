@@ -1,5 +1,6 @@
 package entities;
 
+import nape.geom.Vec2;
 import nape.phys.Body;
 import systems.Base;
 
@@ -24,4 +25,15 @@ class Entity
 	
 	/** Never override this - always use init() instead **/
 	private function new() {}
+}
+
+/** Serializable data for all entities **/
+class EntityData
+{
+	public var x:Float = 0.0;
+	public var y:Float = 0.0;
+	public var w:Float = 16.0;
+	public var h:Float = 16.0;
+	
+	public function new() {}
 }
