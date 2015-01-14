@@ -16,7 +16,9 @@
 	<haxedef name="no-inline" if="neko" />
 	<haxedef name="NAPE_RELEASE_BUILD" />
 	
-	<haxeflag name="--macro" value="include('entities')" /> 
+	<haxeflag name="--macro" value="include('entities')" />
+	<haxeflag name="--macro" value="systems.Serialize.build()" />
+	
 	<assets path="Assets" rename="assets" exclude="openfl.svg" />
 	<icon path="Assets/openfl.svg" />
 	

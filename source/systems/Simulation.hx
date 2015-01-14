@@ -13,10 +13,9 @@ import nape.geom.Vec2;
 import nape.phys.Body;
 import nape.phys.BodyType;
 import nape.shape.Polygon;
-import openfl.Lib;
 import systems.Physics.Callbacks;
 
-/** Handle the logic of activating and updating entities within the simulation region. **/
+/** Handle the logic of activating and deactivating entities within the simulation region. **/
 class Simulation
 {
 	public var inner:Body;

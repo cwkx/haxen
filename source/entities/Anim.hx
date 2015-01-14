@@ -13,7 +13,7 @@ import systems.Serialize;
 import systems.Timestep;
 
 /** An anim is a physical animated visual entity for key-frame animation stored in a spritesheet. **/
-class Anim extends Entity
+class Anim extends Entity implements Serializable
 {
 	public var sprite:AnimatedSprite;
 	public var data:AnimData;

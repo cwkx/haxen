@@ -31,7 +31,6 @@ class Base
 		body.position.x = rect.x;
 		body.position.y = rect.y;
 		rect = null;
-		
 	}
 	
 	/** Gets the bounds from the entities json data **/
