@@ -26,19 +26,18 @@ Hierarchy in an optional scene graph can still be modelled by creating a Node.hx
 entity which contains child entities whose sub-regions update their parent
 regions accordingly.
 
-Roadmap
-	1) Camera
-	2) Make the core 2D entities stable (Button, Sound)
-	3) JSON universe format for Base.hx
-	4) Mobile testing and Input
-	5) (optional) Addons Entity library
-		GUI
-	6) (optional) Haxen Editor library
-	7) Abstract 2D parts and port @cwkx 3D GPU voxel research
+#### Roadmap
+1. Camera
+2. Make the core 2D entities stable (Button, Sound)
+3. JSON universe format for Base.hx
+4. Mobile testing and Input
+5. (optional) Addons Entity library
+...* GUI
+7. (optional) Haxen Editor library
+8. Abstract 2D parts and port @cwkx 3D GPU voxel research
 
-
-Canvas.hx, Timestep.hx, and Physics.hx
-======================================
+Canvas.hx
+=========
 
 Canvas.hx holds the main sprite which manages the top-level update loop. It
 configures how Timestep.hx updates the physics with respect to the drawing.
@@ -56,7 +55,6 @@ ones. See the documentation on the Simulation.hx section.
 
 There is one physical universe per project. To support multiple scenes or states, 
 the Node.hx entity can be used to group hierarchical physical regions of space.
-
 
 Simulation.hx
 =============
