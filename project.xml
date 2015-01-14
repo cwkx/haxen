@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Haxen" package="com.sample.project" version="1.0.0" company="OpenFL" />
+	
+	<app main="Main" path="Export" file="Haxen" />
+	<window width="800" height="600" if="desktop" />
+	<window width="0" height="0" if="html5" />
+	
+	<source path="source" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	<haxelib name="spritesheet" />
+	<haxelib name="nape" />
+	<haxedef name="no-inline" if="neko" />
+	<haxedef name="NAPE_RELEASE_BUILD" />
+	
+	<haxeflag name="--macro" value="include('entities')" /> 
+	<assets path="Assets" rename="assets" exclude="openfl.svg" />
+	<icon path="Assets/openfl.svg" />
+	
+</project>
