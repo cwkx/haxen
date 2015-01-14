@@ -26,13 +26,15 @@ Hierarchy in an optional scene graph can still be modelled by creating a Node.hx
 entity which contains child entities whose sub-regions update their parent
 regions accordingly.
 
-#### Roadmap
+Roadmap
+-------
+
 1. Camera
 2. Make the core 2D entities stable (Button, Sound)
 3. JSON universe format for Base.hx
 4. Mobile testing and Input
 5. (optional) Addons Entity library
-...* GUI
+..* GUI
 7. (optional) Haxen Editor library
 8. Abstract 2D parts and port @cwkx 3D GPU voxel research
 
