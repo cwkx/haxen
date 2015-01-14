@@ -30,7 +30,7 @@
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="False" />
-    <option additional="--macro include('entities')&#xA;--macro systems.Serialize.build()&#xA;-swf-version 11.2&#xA;-debug " />
+    <option additional="--macro include('entities')&#xA;-swf-version 11.2&#xA;-debug " />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
